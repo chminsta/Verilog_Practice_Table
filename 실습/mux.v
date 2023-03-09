@@ -1,13 +1,14 @@
 //design.sv
 
 
-module mux #(
-    input sel[1:0] ,a[3:0],b[3:0],c[3:0],d[3:0]
-    output Out[3:0]
-); (
+module mux (
+    input [1:0] sel,
+    input [3:0] a,b,c,d,
+    output reg [3:0] Out
+); 
     always @(*) begin
         
-
+        
 
     if (sel==2'b00) begin
         Out=a;
@@ -20,18 +21,18 @@ module mux #(
         Out=c;
     end
     
-    else (sel==2'b11) begin
+    else begin
         Out=d;
     end
     end
-);
+
     
 endmodule
 
 
 //testbench.sv
 
-module tb_mux ()
+module tb_mux;
     reg [1:0] sel;
     reg [3:0] a;
     reg [3:0] b;
@@ -42,24 +43,24 @@ module tb_mux ()
     wire [3:0] Out;
 
     cmjk mux(
-        .sel(sel)
-        .a(a)
-        .b(b)
-        .c(c)
-        .d(d)
-        .Out(Out)
+        .sel(sel),
+        .a(a),
+        .b(b),
+        .c(c),
+        .d(d),
+        .Out(Out),
     );
 
     initial 
     begin
-    a=1, b=2, c=3, d=4,
+    a=1; b=2; c=3; d=4;
 
-    sel=0
-    #20 sel=1
-    #20 sel=2
-    #20 sel=3
-    #20 sel=4
-    #20 $stop
+    sel=0;
+    #20 sel=1;
+    #20 sel=2;
+    #20 sel=3;
+    #20 sel=4;
+    #20 $stop;
     end
     
 endmodule
