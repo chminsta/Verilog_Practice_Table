@@ -29,7 +29,6 @@ module mux (
     
 endmodule
 
-
 //testbench.sv
 
 module tb_mux;
@@ -42,25 +41,26 @@ module tb_mux;
 
     wire [3:0] Out;
 
-    cmjk mux(
+    mux cmjk(
         .sel(sel),
         .a(a),
         .b(b),
         .c(c),
         .d(d),
-        .Out(Out),
+        .Out(Out)
     );
 
     initial 
     begin
     a=1; b=2; c=3; d=4;
 
-    sel=0;
-    #20 sel=1;
-    #20 sel=2;
-    #20 sel=3;
-    #20 sel=4;
+   
+    sel=2'b00;
+    #20 sel=2'b01;
+    #20 sel=2'b10;
+    #20 sel=2'b11;
     #20 $stop;
     end
     
 endmodule
+
