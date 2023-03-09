@@ -7,6 +7,7 @@ module mux #(
 ); (
     always @(*) begin
         
+        
 
     if (sel==2'b00) begin
         Out=a;
