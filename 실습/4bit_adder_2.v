@@ -26,23 +26,18 @@ endmodule
 
 
 module full_adder_4bit (
-    input [0:3] x, y,
-    output reg [0:3] sum
+    input [3:0] x, y,cin
+    output reg [3:0] sum
 );
     
-    reg [0:3] c;
-    c[0] = 0;
+    wire c1,c2,c3,c4;
     
-    always @* begin
-        for (int i = 0; i < 4; i = i + 1) begin
-            full_adder_1bit f_a_1b(
-                .x(x[i]),        
-                .y(y[i]),        
-                .c_in(c[i]),     
-                .sum(sum[i]),    
-                .c_out(c[i+1])   
-            );
-        end
+    
+    always @(x,y) begin
+        full_adder_1bit full1(.x(x[0]),.y(y[0]),.c_in(cin),.sum(sum[0]),.c_out(c1));
+        full_adder_1bit full1(.x(x[1]),.y(y[1]),.c_in(c1),.sum(sum[1]),.c_out(c2));
+        full_adder_1bit full1(.x(x[2]),.y(y[2]),.c_in(c2),.sum(sum[2]),.c_out(c3));
+        full_adder_1bit full1(.x(x[3]),.y(y[3]),.c_in(c3),.sum(sum[3]),.c_out(c4));
     end
 
 endmodule
