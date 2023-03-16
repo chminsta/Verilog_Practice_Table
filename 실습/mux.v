@@ -124,4 +124,8 @@ module tb_mux;
     #20 $stop;
     end
     
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+>>>>>>> 5d1094bccd80bbdf01b541688d64fe3423fdebc7
