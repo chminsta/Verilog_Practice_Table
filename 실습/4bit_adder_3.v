@@ -46,3 +46,14 @@ endmodule
 
 
 //testbench
+
+module testbench;
+    
+    reg [0:3] x, y;
+    wire [0:3] sum;
+    
+    full_adder_4bit f_a_4b(.x(x), .y(y), .sum(sum));
+    
+    // testbench code goes here
+    
+endmodule
