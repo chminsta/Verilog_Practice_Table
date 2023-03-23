@@ -1,0 +1,115 @@
+//design
+
+module moore_fsm (
+    input clk,     // clock input
+    input rst,     // active-low reset input
+    input bypass,  // input signal for bypassing from ST1 to ST3
+    
+    output reg [1:0] output  // output signal
+);
+
+// Define the states as an enumerated data type
+typedef enum logic [1:0] {
+    ST0,
+    ST1,
+    ST2,
+    ST3
+} state_t;
+
+// Define the current state register and initialize to ST0
+reg [1:0] curr_state = ST0;
+
+// Define the next state logic
+always @(*) begin
+    case (curr_state)
+        ST0: if (rst) curr_state = ST0; else curr_state = ST1;
+        ST1: if (bypass) curr_state = ST3; else curr_state = ST2;
+        ST2: curr_state = ST3;
+        ST3: curr_state = ST0;
+    endcase
+end
+
+// Define the output logic
+always @(curr_state) begin
+    case (curr_state)
+        ST0: output = 2'b00;
+        ST1: output = 2'b01;
+        ST2: output = 2'b10;
+        ST3: output = 2'b11;
+    endcase
+end
+
+endmodule
+
+
+
+//testbench
+
+module moore_fsm_tb;
+
+// Define the clock and reset signals
+reg clk = 0;
+reg rst = 1;
+
+// Define the bypass signal for ST1 to ST3 transition
+reg bypass;
+
+// Instantiate the DUT (Design Under Test)
+moore_fsm dut (
+    .clk(clk),
+    .rst(rst),
+    .bypass(bypass),
+    .output(output)
+);
+
+// Define the output signal for the DUT
+wire [1:0] output;
+
+// Define the simulation time parameters
+integer sim_time = 50;
+
+// Generate a clock signal
+always #5 clk = ~clk;
+
+// Reset the DUT for the first few clock cycles
+initial begin
+    #10 rst = 0;
+    #20 rst = 1;
+end
+
+// Stimulus generator for the FSM
+initial begin
+    // Wait for the reset to complete
+    #10;
+    
+    // Transition from ST0 to ST1
+    #10 bypass = 0;
+    #10 bypass = 1;
+    
+    // Transition from ST1 to ST2
+    #10 bypass = 0;
+    
+    // Transition from ST2 to ST3
+    #10 bypass = 1;
+    
+    // Transition from ST3 to ST0
+    #10 bypass = 0;
+    
+    // Repeat the sequence a few more times
+    #10 bypass = 1;
+    #10 bypass = 0;
+    #10 bypass = 1;
+    #10 bypass = 0;
+    #10 bypass = 1;
+    #10 bypass = 0;
+end
+
+// Monitor the output signal
+always @(output) $display("Output: %d", output);
+
+// Stop the simulation after the specified time
+initial begin
+    #sim_time $finish;
+end
+
+endmodule
