@@ -1,10 +1,31 @@
-// design
-module meely_fsm_bychangmin (
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2023/03/23 17:24:20
+// Design Name: 
+// Module Name: meely_FSM_bychangmin
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module meely_FSM_bychangmin (
     input clk,     // clk 
     input rstn,     // 리셋
     input din_bit,  //input, 0110이여야함
     
-    output wire detect_out  // output 
+    output reg detect_out  // output 
 );
 
 // ST state를 나타내는 파라미터 정의, START를 state0으로 정의
@@ -46,9 +67,30 @@ endmodule
 
 
 
+//
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2023/03/23 17:24:40
+// Design Name: 
+// Module Name: tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 
-//testbench
 module tb;
     reg clk, rstn, din_bit;
     wire detect_out;
@@ -56,11 +98,11 @@ module tb;
     initial begin
         clk=0;
         forever begin
-            #10 clk=~clk;
+            #10 clk=!clk;
         end    
     end
 
-    meely_fsm_bychangmin meely_fsm_bychangmin(clk, rstn, din_bit, detect_out);
+    meely_FSM_bychangmin meely_fsm_bychangmin(clk, rstn, din_bit, detect_out);
     
     
     initial begin
@@ -88,8 +130,5 @@ module tb;
         #5 rstn=0;
     end
 
-    initial begin
-        $dumpfile("dump.vcd"); 
-        $dumpvars;
-    end
+
 endmodule
