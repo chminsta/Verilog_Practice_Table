@@ -66,7 +66,7 @@ always @(*) begin
         end
         LSB:
         begin
-            if (r_multiplier[0]) r_state=SHIFT;
+            if (!r_multiplier[0]) r_state=SHIFT;
             else r_state=ADD;
         end
         ADD:
