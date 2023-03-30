@@ -1,4 +1,24 @@
-//design
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2023/03/30 16:24:25
+// Design Name: 
+// Module Name: mul8_uns
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module mul8_uns (
 input [3:0] a,          
@@ -24,8 +44,9 @@ always @(posedge clk, negedge rstn) begin
         if (!rstn) begin
             r_multiplicand <=0;
             r_multiplier <=0;
-            r_product <=0:
+            r_product <=0;
             r_count<=4;
+           
             result <=0;
             done<=0;
         end
@@ -35,24 +56,24 @@ always @(*) begin
     case(r_state)
         IDLE:
         begin
-            if (start) state = START;      //start 신호가 들어오면 시작
+            if (start) r_state = START;      //start 신호가 들어오면 시작
         end
-        START
+        START:
         begin
             r_multiplicand={4'b0000,a};
             r_multiplier=b;
             r_state=LSB;
         end
-        LSB
+        LSB:
         begin
             if (r_multiplier[0]) r_state=SHIFT;
             else r_state=ADD;
         end
-        ADD
+        ADD:
         begin
             r_product=r_multiplicand+r_product;
         end
-        SHIFT
+        SHIFT:
         begin
             r_multiplicand=r_multiplicand << 1;      //shift left
             r_multiplier=r_multiplier >> 1;         //shift right
@@ -61,7 +82,7 @@ always @(*) begin
             else r_state = LSB;
 
         end        
-        DONE
+        DONE:
         begin
             result = r_product;
             done = 1;
@@ -71,7 +92,29 @@ end
 endmodule
 
 
+
 //testbench
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2023/03/30 17:24:16
+// Design Name: 
+// Module Name: tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module tb;
     reg clk, rstn, start;
@@ -91,21 +134,21 @@ module tb;
 
     
     initial begin
-        a=0, b=0;
-    #10 a=1, b=1;
-    #10 a=3, b=5;
-    #10 a=12, b=5;
-    #10 a=14, b=13;
-    #10 a=8, b=4;
-    #10 a=2, b=7;
-    #10 a=3, b=2;
-    #10 a=4, b=7;
-    #10 a=2, b=4;
-    #10 a=10, b=10;
-    #10 a=11, b=15;
-    #10 a=12, b=12;
-    #10 a=13, b=15;
-    #10 a=2, b=2;
+        a=0; b=0;
+    #10 a=1; b=1;
+    #10 a=3; b=5;
+    #10 a=12; b=5;
+    #10 a=14; b=13;
+    #10 a=8;b=4;
+    #10 a=2; b=7;
+    #10 a=3; b=2;
+    #10 a=4; b=7;
+    #10 a=2; b=4;
+    #10 a=10; b=10;
+    #10 a=11; b=15;
+    #10 a=12; b=12;
+    #10 a=13; b=15;
+    #10 a=2; b=2;
     #10 $finish;
     end
 
