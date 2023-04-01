@@ -1,26 +1,21 @@
 //design
 
 module moore_fsm (
-    input clk,     // clock input
-    input rst,     // active-low reset input
-    input bypass,  // input signal for bypassing from ST1 to ST3
+    input clk,     // clk 
+    input rst,     // 리셋
+    input bypass,  // bypass 1이되면 ST1에서 ST3
     
-    output reg [1:0] output  // output signal
+    output reg [1:0] out  // output 
 );
 
-// Define the states as an enumerated data type
-typedef enum logic [1:0] {
-    ST0,
-    ST1,
-    ST2,
-    ST3
-} state_t;
+// ST state를 나타내는 파라미터 정의
+parameter ST0 = 2'b00, ST1 = 2'b01, ST2 = 2'b10, ST3 = 2'b11,  ;
 
-// Define the current state register and initialize to ST0
+// curr_state 정의, 초기는 ST0
 reg [1:0] curr_state = ST0;
 
-// Define the next state logic
-always @(*) begin
+// 다음 state 정하기
+always @(posedge clk ,negedge rstn) begin
     case (curr_state)
         ST0: if (rst) curr_state = ST0; else curr_state = ST1;
         ST1: if (bypass) curr_state = ST3; else curr_state = ST2;
@@ -29,13 +24,13 @@ always @(*) begin
     endcase
 end
 
-// Define the output logic
+// out 정의
 always @(curr_state) begin
     case (curr_state)
-        ST0: output = 2'b00;
-        ST1: output = 2'b01;
-        ST2: output = 2'b10;
-        ST3: output = 2'b11;
+        ST0: out = 2'b00;
+        ST1: out = 2'b01;
+        ST2: out = 2'b10;
+        ST3: out = 2'b11;
     endcase
 end
 
@@ -59,14 +54,13 @@ moore_fsm dut (
     .clk(clk),
     .rst(rst),
     .bypass(bypass),
-    .output(output)
+    .out(out)
 );
 
 // Define the output signal for the DUT
-wire [1:0] output;
+wire [1:0] out;
 
-// Define the simulation time parameters
-integer sim_time = 50;
+
 
 // Generate a clock signal
 always #5 clk = ~clk;
@@ -105,11 +99,11 @@ initial begin
 end
 
 // Monitor the output signal
-always @(output) $display("Output: %d", output);
+always @(out) $display("Output: %d", out);
 
 // Stop the simulation after the specified time
 initial begin
-    #sim_time $finish;
+    #100 $finish;
 end
 
 endmodule

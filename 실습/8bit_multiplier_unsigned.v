@@ -112,57 +112,95 @@ module mul8_uns (
 
   reg [7:0] r_multiplicand, r_product;
   reg [3:0] r_multiplier;
-  reg [2:0] r_state;
+  reg [2:0] r_state,next_state;
   reg [1:0] r_count;
 
-  always @(posedge clk, negedge rstn) begin
+always @(posedge clk, negedge rstn) begin
+    if (!rstn) r_state <= IDLE;        
+    else state<=next_state;
+end
+always @(*) begin
+    case(state)
+    IDLE:
+    begin
+        if (start) begin
+            next_state = START;
+        end
+        else begin
+            next_state=IDLE;
+        end
+    end
+    START:begin
+        next_state=LSB;
+    end
+    LSB:begin
+        if(r_multiplier[0]) next_state = ADD;
+        else next_state = SHIFT;
+    end
+    ADD: begin 
+        next_state = SHIFT;
+    end
+    SHIFT:begin
+        if(r_count != 0)next_state=LSB;
+        else next_state = DONE;
+    end
+    DONE:begin
+        next_state= IDLE;
+    end
+    default:begin
+        next_state= IDLE;
+    end
+    endcase
+end
+always @(posedge clk, negedge rstn) begin
     if (!rstn) begin
       r_multiplicand <= 0;
       r_multiplier <= 0;
       r_product <= 0;
       r_count <= 4;
-      r_state <= IDLE; // reset state to IDLE
       result <= 0;
       done <= 0;
     end
     else begin
-      case (r_state)
+      case (next_state)
         IDLE:
-          if (start)
-            r_state <= START;
+            r_multiplicand <= 0;
+            r_multiplier <= 0;
+            r_product <= 0;
+            r_count <= 4;
+            result <= 0;
+            done <= 0;
         START:
-          begin
-            r_multiplicand = {4'b0000, a};
+        begin
+            r_multiplicand <= {4'b0000, a};
             r_multiplier = b;
-            r_state <= LSB;
-          end
+            r_product <= 0;
+            r_count <= 4;
+            result <= 0;
+            done <= 0;
+        end
         LSB:
-          begin
-            if (r_multiplier[0] == 1)
-              r_state <= ADD;
-            else
-              r_state <= SHIFT;
-          end
+            r_multiplicand <= r_multiplicand; //순차회로에서 자기자신을 기억해라
+            r_multiplier <= r_multiplier;
+            r_count<=r_count -1;
+            r_product <= 0;
+            result <= 0;
+            done <= 0;
+
         ADD:
           begin
             r_product = r_multiplicand + r_product;
-            r_state <= SHIFT;
           end
         SHIFT:
           begin
             r_multiplicand = r_multiplicand << 1;
             r_multiplier = r_multiplier >> 1;
-            r_count = r_count - 1;
-            if (r_count == 0)
-              r_state <= DONE;
-            else
-              r_state <= LSB;
+            
           end
         DONE:
           begin
             result = r_product;
             done = 1;
-            r_state <= IDLE; // reset state to IDLE
           end
       endcase
     end

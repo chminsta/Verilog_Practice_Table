@@ -50,3 +50,5 @@ endmodule
 
 //testbench
 
+a=0, b=0, c_in=0
+#10 a=
