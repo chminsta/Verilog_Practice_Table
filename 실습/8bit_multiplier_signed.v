@@ -1,5 +1,5 @@
 // Code your design here
-module mul8_uns (
+module mul8_sign (
 
   input signed [3:0] a, b,          
   input clk, rstn, start,
@@ -98,7 +98,7 @@ always @(posedge clk, negedge rstn) begin
             else begin
                 r_multiplier = b;
             end
-            sign <= a[3] xor b[3]; //결과값 부호 1이면 음수 0이면 양수
+            sign <= a[3] ^ b[3]; //결과값 부호 1이면 음수 0이면 양수
             r_product <= 0;
             r_count <= 4;
             result <= 0;
@@ -163,7 +163,7 @@ module tb;
         end    
     end
 
-    mul8_uns mul8_uns(a,b,clk, rstn, start, result, done);
+    mul8_sign mul8_sign(a,b,clk, rstn, start, result, done);
 
     
     initial begin
