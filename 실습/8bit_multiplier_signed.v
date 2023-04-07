@@ -1,18 +1,19 @@
 // Code your design here
+// Code your design here
 module mul8_sign (
 
   input signed [3:0] a, b,          
   input clk, rstn, start,
-  output reg signed [7:0] result,
+  output reg [7:0] result,
   output reg done
 );
 
-  localparam IDLE = 3'b000,
-            START = 3'b001,
-            LSB = 3'b010,
-            ADD = 3'b011,
-            SHIFT = 3'b100,
-            DONE = 3'b101;
+  localparam IDLE = 3'b000,	//0
+            START = 3'b001,	//1
+            LSB = 3'b010,	//2
+            ADD = 3'b011,	//3
+            SHIFT = 3'b100,	//4
+            DONE = 3'b101;	//5
 
   reg [7:0] r_multiplicand, r_product;
   reg [3:0] r_multiplier;
@@ -108,7 +109,7 @@ always @(posedge clk, negedge rstn) begin
             r_multiplicand <= r_multiplicand; //순차회로에서 자기자신을 기억해라
             r_multiplier <= r_multiplier;
             r_count<=r_count -1;
-            r_product <= 0;
+            
             result <= 0;
             done <= 0;
         end
@@ -144,6 +145,14 @@ endmodule
 
 
 
+
+
+
+
+
+//////////////////
+
+
 //////////////////
 
 
@@ -167,7 +176,7 @@ module tb;
 
     
     initial begin
-        a=-3; b=-7;
+        a=-3; b=7;
 
     #200 $finish;
     end
