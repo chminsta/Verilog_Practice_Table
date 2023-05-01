@@ -6,6 +6,7 @@ input [31:0] i_PC,
 output reg [31:0] o_instruction
 );
 
+
 //int i
 
 reg [31:0] instruction_mem [0:MEM_DEPTH-1];
@@ -58,3 +59,4 @@ always @(posedge i_clk negedge i_rstn) begin
     else i_PC <= i_PC + 4;
 end
 endmodule
+
