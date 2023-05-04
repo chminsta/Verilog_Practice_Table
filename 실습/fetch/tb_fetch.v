@@ -21,7 +21,7 @@ fetch fetch1(
 );
 
 initial begin
-    $readmemh("instruction_memory.mem", iMEM.instruction_mem);
+    $readmemh("instruction_memory.mem", fetch1.iMEM.instruction_mem);
 
 end
     
