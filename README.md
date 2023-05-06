@@ -9,4 +9,6 @@ Outside the '실습' directory
 
 -------------------------------------------
 Inside the '실습' directory
+--------------------------
+
 ### These are projects I coded in class.
