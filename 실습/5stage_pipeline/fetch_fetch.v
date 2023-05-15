@@ -15,11 +15,10 @@ PC PC(
     .i_PC(i_PC),
     .o_PC(PC_out)
 )
-//input pcin output instruction
+//input  output instruction
 iMEM#(
     .MEM_DEPTH(MEM_DEPTH)
 ) iMEM (
-    .i_rstn(i_rstn),
     .i_PC(PC_out),
     .o_instruction(o_instruction)
 );
@@ -31,7 +30,7 @@ mux mux(
     .o_PC(i_PC)
 );
 
-
+//adder
 assign o_PC = PCout+4;
 
 endmodule
