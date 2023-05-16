@@ -20,8 +20,8 @@ output reg o_RegDst,
 output reg o_RegWrite,
 output reg [1:0] o_ALUOP,
 output reg [31:0] o_PCplus4,
-output reg [31:0] o Rdatal,
-output reg [31:0] o Rdata2,
+output reg [31:0] o_Rdatal,
+output reg [31:0] o_Rdata2,
 output reg [31:0] o_signextImmediate,
 output reg [4:0] o_RegDst1,
 output reg [4:0] o_RegDst2
@@ -58,10 +58,10 @@ o_RegWrite <= i_RegWrite;
 o_ALUOP <= i_ALUOp; 
 o_PCplus4 <= i_PCplus4; 
 o_Rdata1 <= i_Rdata1; 
-o Rdata2 <= i Rdata2;
+o_Rdata2 <= i Rdata2;
 o_signextImmediate <= i_signextImmediate; 
 o_RegDst1 <= i_RegDst1;
-o RegDst2 <= i RegDst2;
+o_RegDst2 <= i RegDst2;
 end
 end
 endmodule
