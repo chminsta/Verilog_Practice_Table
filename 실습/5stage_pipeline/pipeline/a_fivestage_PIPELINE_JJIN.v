@@ -2,11 +2,18 @@ module MIPS_pipeline (
     input i_clk,
     input i_rstn,
     output [31:0] ALUresult,
-    output [31:0] Instruction,
-    output [31:0] Read_Data1,
-    output [31:0] Read_Data2,
-    output [4:0] Reg_Dst
+    output [31:0] Instruction_IF,
+    output [31:0] Rdata1_EX,
+    output [31:0] Rdata2_EX,
+    output [4:0] Reg_Dst_WB
 );
+//[0]ALUctrl------------------------------------------------------
+//add   =   4'b0010
+//sub   =   4'b0110
+//and   =   4'b0000
+//or    =   4'b0001
+//slt   =   4'b0111
+
 //[1]fetch-----------------------------------------------------------------------------------------------------------------------------------------------------------
 //(a)wires
     wire [31:0] PCplus4_IF; //(PC+4) ,o_PC -> i_PCplus4
@@ -55,9 +62,9 @@ module MIPS_pipeline (
     wire MemWrite_EX;
     wire Branch_EX;
     wire RegWrite_EX;
-    wire signed [31:0] ALUresult_EX;
-    wire signed [31:0] Rdata1_EX;
-    wire signed [31:0] Rdata2_EX;
+    wire [31:0] ALUresult_EX;
+    wire [31:0] Rdata1_EX;
+    wire [31:0] Rdata2_EX;
     wire [4:0] Reg_Dst1_EX;
     wire [4:0] Reg_Dst2_EX
     wire [31:0] PCplus4_EX;
@@ -77,7 +84,7 @@ module MIPS_pipeline (
     wire Branch_MEM;    //PCSrc_WB = Branch_MEM & zero_MEM
     wire zero_MEM;   
     wire RegWrite_MEM;  //다음pipeline
-    wire signed [31:0] ALUresult_MEM;  //Memaddr, 다음 pipeline
+    wire [31:0] ALUresult_MEM;  //Memaddr, 다음 pipeline
     wire [31:0] MemWriteData_MEM; //MemWriteData
     wire [4:0] Reg_Dst_MEM; //다음 pipeline
     wire [31:0] MemReadData_MEM; //
