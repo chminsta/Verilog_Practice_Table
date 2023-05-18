@@ -1,6 +1,6 @@
 module Data_memory (
     input i_clk, i_rstn, MemWrite, MemRead,
-    input [31:0] Memaddr, MemWriteData
+    input [31:0] Memaddr, MemWriteData,
     output reg [31:0] MemReadData
 );
     integer i;
