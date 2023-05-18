@@ -1,4 +1,4 @@
-file_path = "Verilog_Practice_Table/실습/5stage_pipeline/pipeline/assembly_code.txt"
+file_path = "실습/5stage_pipeline/pipeline/assembly_code.txt"
 with open(file_path) as f:
     codes = f.readlines()
 
@@ -93,7 +93,7 @@ for code in codes:
         opcodes.append("0"*32)
 
 
-with open('instruction.txt', 'w', encoding='UTF-8') as f:
+with open('실습/5stage_pipeline/pipeline/instruction.txt', 'w', encoding='UTF-8') as f:
    for op in opcodes:
        hex_value = hex(int(op, 2))  # Convert binary to hexadecimal
        f.write('0x' + hex_value[2:] + '\n')
