@@ -50,7 +50,19 @@ module Control_Unit (
                 MemRead = 1'b0;
                 MemtoReg = 1'bx;
                 ALUOp = 2'b01;
+            end
+            6'b001000 : //addi 인 경우
+            begin
+                RegWrite = 1'b1;
+                RegDst = 1'b0;
+                ALUSrc = 1'b1;
+                Branch = 1'b0;
+                MemWrite = 1'b0;
+                MemRead = 1'b0;
+                MemtoReg = 1'b0;
+                ALUOp = 2'b00;               
             end  
+            
             default: 
             begin
                 RegWrite = 1'bx;

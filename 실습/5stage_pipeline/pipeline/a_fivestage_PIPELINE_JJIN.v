@@ -104,7 +104,7 @@ module MIPS_pipeline (
     wire [4:0] Reg_Dst_WB;
     wire [31:0] Write_data_WB; //MEM reg [31:0] MemReadData -> register_file [31:0] W_data
 //(b)wb   
-    mux mux4(ALUresult, MemReadData, MemtoReg, Write_data_WB);
+    wbmux wm(ALUresult, MemReadData, MemtoReg, Write_data_WB);
 
 //EZ
    
