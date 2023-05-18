@@ -1,7 +1,7 @@
 
 //MEM WB pipeline register
-module MEM WB (
-input i_clk
+module MEM_WB (
+input i_clk,
 input i_rstn,
 input i_MemtoReg,
 input i_RegWrite,
@@ -11,12 +11,12 @@ input [4:0] i_Reg_Dst,
 output reg o_MemtoReg,
 output reg o_RegWrite,
 output reg [31:0] o_Rdata, //data memory
-output reg [31:0] o__ALUresult,
+output reg [31:0] o_ALUresult,
 output reg [4:0] o_Reg_Dst
 );
 
 always @(posedge i_clk, negedge i_rstn) begin
-if(!i rstn)
+if(!i_rstn)
 begin
 o_MemtoReg <= 1'b0;
 o_RegWrite <= 1'b0;
