@@ -5,7 +5,8 @@ with open(file_path) as f:
 opcodes=[]
 PC=0
 
-    
+for i in range(4):
+    opcodes.append("0"*32)
         
 
 def make_bits(a: int, b:str) -> str: #b를 a비트로
@@ -93,11 +94,11 @@ for code in codes:
         opcodes.append("0"*32)
 
 
-with open('실습/5stage_pipeline/pipeline/instruction.txt', 'w', encoding='UTF-8') as f:
-   for op in opcodes:
-       hex_value = hex(int(op, 2))  # Convert binary to hexadecimal
-       f.write('0x' + hex_value[2:] + '\n')
+# with open('실습/5stage_pipeline/pipeline/instruction.txt', 'w', encoding='UTF-8') as f:
+#    for op in opcodes:
+#        hex_value = hex(int(op, 2))  # Convert binary to hexadecimal
+#        f.write('0x' + hex_value[2:] + '\n')
 
-# with open('instruction_jinkyu.txt','w',encoding='UTF-8') as f:
-#     for op in opcodes:
-#         f.write(op+'\n')
+with open('실습/5stage_pipeline/pipeline/instruction.txt','w',encoding='UTF-8') as f:
+    for op in opcodes:
+        f.write(op+'\n')
