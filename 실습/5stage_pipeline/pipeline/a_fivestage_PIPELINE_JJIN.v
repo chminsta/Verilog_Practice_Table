@@ -66,7 +66,7 @@ module MIPS_pipeline (
     wire [31:0] Rdata1_EX;
     wire [31:0] Rdata2_EX;
     wire [4:0] Reg_Dst1_EX;
-    wire [4:0] Reg_Dst2_EX
+    wire [4:0] Reg_Dst2_EX;
     wire [31:0] PCplus4_EX;
 //(b)execution
     ALU_Control ac(ALUop_EX, Immediate_EX[5:0], ALUctrl_EX);

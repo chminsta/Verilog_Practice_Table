@@ -7,7 +7,7 @@ module Control_Unit (
 );
     always @(*) begin
         case (op)
-            6'b000000 : //R 타입인 경우
+            6'b000000 : //R-type
             begin
                 RegWrite = 1'b1;
                 RegDst = 1'b1;
@@ -18,7 +18,7 @@ module Control_Unit (
                 MemtoReg = 1'b0;
                 ALUOp = 2'b10;
             end 
-            6'b100011 : //LW 인 경우
+            6'b100011 : //LW 
             begin
                 RegWrite = 1'b1;
                 RegDst = 1'b0;
@@ -29,7 +29,7 @@ module Control_Unit (
                 MemtoReg = 1'b1;
                 ALUOp = 2'b00;
             end
-            6'b101011 : //SW 인 경우
+            6'b101011 : //SW 
             begin
                 RegWrite = 1'b0;
                 RegDst = 1'bx;
@@ -40,7 +40,7 @@ module Control_Unit (
                 MemtoReg = 1'bx;
                 ALUOp = 2'b00;
             end
-            6'b000100 : //beq 인 경우
+            6'b000100 : //beq
             begin
                 RegWrite = 1'b0;
                 RegDst = 1'bx;
@@ -51,7 +51,7 @@ module Control_Unit (
                 MemtoReg = 1'bx;
                 ALUOp = 2'b01;
             end
-            6'b001000 : //addi 인 경우
+            6'b001000 : //addi 
             begin
                 RegWrite = 1'b1;
                 RegDst = 1'b0;

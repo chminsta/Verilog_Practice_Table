@@ -21,7 +21,7 @@ output reg [4:0] o_Reg_Dst
 
 
 always @(posedge i_clk, negedge i_rstn) begin
-if(!i rstn)
+if(!i_rstn)
 begin
 o_MemtoReg <= 1'b0; 
 o_MemRead <= 1'b0; 
