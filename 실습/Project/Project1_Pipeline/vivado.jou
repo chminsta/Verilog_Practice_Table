@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 28 00:41:54 2023
+# Process ID: 14680
+# Current directory: E:/Vivado/2020.2/project/Project1_Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent244 E:\Vivado\2020.2\project\Project1_Pipeline\Project1_Pipeline.xpr
+# Log file: E:/Vivado/2020.2/project/Project1_Pipeline/vivado.log
+# Journal file: E:/Vivado/2020.2/project/Project1_Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+launch_simulation
+source tb_MIPS.tcl
+close_sim
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+close_project
+create_project Project2_Hazard E:/Vivado/2020.2/project/Project2_Hazard -part xc7a75tfgg484-1
+file mkdir E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new
+close [ open E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v w ]
+add_files E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v
+update_compile_order -fileset sources_1
+file mkdir E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_test.v w ]
+add_files -fileset sim_1 E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_test.v
+update_compile_order -fileset sim_1
+launch_simulation
+source test.tcl
+close_sim
+add_files -norecurse {E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_MIPSS [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_MIPSS.tcl
+close_sim
+launch_simulation
+source tb_MIPSS.tcl
+close_sim
+launch_simulation
+source tb_MIPSS.tcl
+relaunch_sim
+close_sim

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 28 14:25:11 2023
+# Process ID: 10196
+# Current directory: E:/Vivado/2020.2/project/Project2_Hazard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5888 E:\Vivado\2020.2\project\Project2_Hazard\Project2_Hazard.xpr
+# Log file: E:/Vivado/2020.2/project/Project2_Hazard/vivado.log
+# Journal file: E:/Vivado/2020.2/project/Project2_Hazard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+launch_simulation
+source tb_MIPSS.tcl
+close_sim
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+close_project

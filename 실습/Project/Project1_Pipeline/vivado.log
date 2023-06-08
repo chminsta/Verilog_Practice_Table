@@ -1,0 +1,920 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 28 00:41:54 2023
+# Process ID: 14680
+# Current directory: E:/Vivado/2020.2/project/Project1_Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent244 E:\Vivado\2020.2\project\Project1_Pipeline\Project1_Pipeline.xpr
+# Log file: E:/Vivado/2020.2/project/Project1_Pipeline/vivado.log
+# Journal file: E:/Vivado/2020.2/project/Project1_Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:49 ; elapsed = 00:00:20 . Memory (MB): peak = 1019.680 ; gain = 0.000
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a75tfgg484-1
+Top: MIPS_5stage
+INFO: [Device 21-403] Loading part xc7a75tfgg484-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1305.438 ; gain = 245.148
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_5stage' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'iMEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'iMEM' (2#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (3#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (4#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (5#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Reg_File' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_File' (6#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (7#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (8#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Execute' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (9#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Execute' (11#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (12#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Data_memory' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Data_memory' (13#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (14#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_5stage' (15#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1382.062 ; gain = 321.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1382.062 ; gain = 321.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1382.062 ; gain = 321.773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1382.062 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1479.551 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1572.805 ; gain = 512.516
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1572.805 ; gain = 553.125
+close_design
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_MIPS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Execute
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_5stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sim_1/new/tb_MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MIPS
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim'
+"xelab -wto 596e48a798684e8b980ba80abc781d5e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPS_behav xil_defaultlib.tb_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 596e48a798684e8b980ba80abc781d5e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPS_behav xil_defaultlib.tb_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.iMEM
+Compiling module xil_defaultlib.fetch
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Reg_File
+Compiling module xil_defaultlib.sign_extend
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Execute
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.MIPS_5stage
+Compiling module xil_defaultlib.tb_MIPS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPS_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_MIPS_behav -key {Behavioral:sim_1:Functional:tb_MIPS} -tclbatch {tb_MIPS.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_MIPS.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_MIPS_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1615.840 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a75tfgg484-1
+Top: MIPS_5stage
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1615.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_5stage' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'iMEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'iMEM' (2#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (3#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (4#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (5#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Reg_File' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_File' (6#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (7#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (8#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Execute' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (9#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Execute' (11#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (12#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Data_memory' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Data_memory' (13#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (14#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_5stage' (15#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1615.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1615.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1615.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1615.840 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1647.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1689.402 ; gain = 73.562
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1689.402 ; gain = 73.562
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a75tfgg484-1
+Top: MIPS_5stage
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1705.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_5stage' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'iMEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'iMEM' (2#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (3#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (4#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (5#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Reg_File' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_File' (6#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (7#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (8#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Execute' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (9#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Execute' (11#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (12#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Data_memory' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Data_memory' (13#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (14#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_5stage' (15#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1705.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1705.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1705.285 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1705.285 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1705.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1705.285 ; gain = 0.000
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1705.285 ; gain = 0.000
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a75tfgg484-1
+Top: MIPS_5stage
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_5stage' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PC' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'iMEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'iMEM' (2#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (3#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (4#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (5#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Reg_File' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_File' (6#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extend' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (7#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (8#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Execute' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control' (9#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Execute' (11#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (12#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Data_memory' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Data_memory' (13#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (14#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_5stage' (15#1) [E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1710.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1710.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1710.289 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1710.289 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1710.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1710.289 ; gain = 0.000
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1710.289 ; gain = 0.000
+close_design
+close_project
+create_project Project2_Hazard E:/Vivado/2020.2/project/Project2_Hazard -part xc7a75tfgg484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2020.2/data/ip'.
+file mkdir E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new
+close [ open E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v w ]
+add_files E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v
+update_compile_order -fileset sources_1
+file mkdir E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_test.v w ]
+add_files -fileset sim_1 E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_test.v
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xelab -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun May 28 02:09:27 2023. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun May 28 02:09:27 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1714.266 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1714.266 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1714.266 ; gain = 0.000
+add_files -norecurse {E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v
+update_compile_order -fileset sim_1
+set_property top tb_MIPSS [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_MIPSS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_MIPSS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXECUTE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FETCH
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PCnext_IF' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Rdata1_ID' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:24]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PCSrc' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:28]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ID_FWA' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:59]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MIPSS
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xelab -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.Inst_MEM(MEM_DEPTH=128)
+Compiling module xil_defaultlib.FETCH
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Reg_File
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.DECODE
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.MUX3
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXECUTE
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.HazardControl
+Compiling module xil_defaultlib.MIPS
+Compiling module xil_defaultlib.tb_MIPSS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPSS_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/xsim.dir/tb_MIPSS_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/xsim.dir/tb_MIPSS_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun May 28 02:14:18 2023. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun May 28 02:14:18 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1714.266 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_MIPSS_behav -key {Behavioral:sim_1:Functional:tb_MIPSS} -tclbatch {tb_MIPSS.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_MIPSS.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file data.txt
+WARNING: Too many words specified in data file data.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_MIPSS_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 1714.266 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1714.266 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_MIPSS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_MIPSS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXECUTE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FETCH
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_out' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PCSrc' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:27]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Dst_EX' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:44]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'MEM_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:50]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'WB_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:56]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Stall' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:59]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MIPSS
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xelab -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.Inst_MEM(MEM_DEPTH=128)
+Compiling module xil_defaultlib.FETCH
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Reg_File
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.DECODE
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.MUX3
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXECUTE
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.HazardControl
+Compiling module xil_defaultlib.MIPS
+Compiling module xil_defaultlib.tb_MIPSS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPSS_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_MIPSS_behav -key {Behavioral:sim_1:Functional:tb_MIPSS} -tclbatch {tb_MIPSS.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_MIPSS.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file data.txt
+WARNING: Too many words specified in data file data.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_MIPSS_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1714.266 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_MIPSS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_MIPSS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXECUTE
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'MX_A' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v:11]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FETCH
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_out' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PCSrc' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:28]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Dst_EX' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:45]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'MEM_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:51]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'WB_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:57]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Stall' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:60]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MIPSS
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xelab -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.Inst_MEM(MEM_DEPTH=128)
+Compiling module xil_defaultlib.FETCH
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Reg_File
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.DECODE
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.MUX3
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXECUTE
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.HazardControl
+Compiling module xil_defaultlib.MIPS
+Compiling module xil_defaultlib.tb_MIPSS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPSS_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_MIPSS_behav -key {Behavioral:sim_1:Functional:tb_MIPSS} -tclbatch {tb_MIPSS.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_MIPSS.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file data.txt
+WARNING: Too many words specified in data file data.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_MIPSS_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1714.266 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_MIPSS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_MIPSS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXECUTE
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'MX_A' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v:11]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FETCH
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_out' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PCSrc' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:28]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Dst_EX' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:45]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'MEM_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:51]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'WB_Dst' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:57]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Stall' is not allowed [E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v:60]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_MIPSS
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim'
+"xelab -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 680dd59d4f4546ef98b5c510c9dbac5a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_MIPSS_behav xil_defaultlib.tb_MIPSS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.Inst_MEM(MEM_DEPTH=128)
+Compiling module xil_defaultlib.FETCH
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Reg_File
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.DECODE
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.MUX3
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EXECUTE
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.HazardControl
+Compiling module xil_defaultlib.MIPS
+Compiling module xil_defaultlib.tb_MIPSS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPSS_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+WARNING: Too many words specified in data file data.txt
+WARNING: Too many words specified in data file data.txt
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1714.266 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 28 03:19:54 2023...

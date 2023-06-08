@@ -1,0 +1,24 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sim_1/new/tb_MIPS.v,1685610705,verilog,,,,tb_MIPS,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sim_1/new/tb_project1.v,1685611566,verilog,,,,tb_project1,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU.v,1685189780,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v,,ALU,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ALU_Control.v,1684083947,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v,,ALU_Control,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ControlUnit.v,1685886785,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v,,ControlUnit,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Data_memory.v,1685887428,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v,,Data_memory,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/EX_MEM.v,1683819138,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v,,EX_MEM,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Execute.v,1683186381,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v,,Execute,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/ID_EX.v,1683819116,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v,,ID_EX,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/IF_ID.v,1684148928,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v,,IF_ID,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MEM_WB.v,1683819215,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v,,MEM_WB,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/MIPS_5stage.v,1685888855,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v,,MIPS_5stage,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/PC.v,1684391597,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Project1.v,,PC,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Project1.v,1685900075,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v,,Project1,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/Reg_File.v,1685888448,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v,,Reg_File,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/fetch.v,1685191769,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v,,fetch,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/iMEM.v,1685606368,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v,,iMEM,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/sign_extend.v,1682753990,verilog,,E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sim_1/new/tb_project1.v,,sign_extend,,,,,,,,
+E:/Vivado/2020.2/project/Project1_Pipeline/Project1_Pipeline.srcs/sources_1/new/test.v,1685188270,verilog,,,,test,,,,,,,,

@@ -1,0 +1,26 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_MIPSS.v,1684706520,verilog,,,,tb_MIPSS,,,,,,,,
+,,,,,,tb_project2,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ALU.v,1684605409,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v,,ALU,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ControlUnit.v,1685252233,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v,,ControlUnit,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/DECODE.v,1685904429,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v,,DECODE,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EXECUTE.v,1685906728,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v,,EXECUTE,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/EX_MEM.v,1684605416,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v,,EX_MEM,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/FETCH.v,1685907096,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v,,FETCH,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/HazardControl.v,1685211362,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v,,HazardControl,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/ID_EX.v,1685620984,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v,,ID_EX,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/IF_ID.v,1685901223,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v,,IF_ID,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Inst_MEM.v,1685617724,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v,,Inst_MEM,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM.v,1685618632,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v,,MEM,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MEM_WB.v,1684605437,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v,,MEM_WB,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MIPS.v,1684690876,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v,,MIPS,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/MUX3.v,1684605402,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v,,MUX3,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/PC.v,1684605353,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v,,PC,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/Reg_File.v,1684706287,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v,,Reg_File,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/SignExtend.v,1684605374,verilog,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/project2.v,,SignExtend,,,,,,,,
+,,,,E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sim_1/new/tb_project2.v,,project2,,,,,,,,
+E:/Vivado/2020.2/project/Project2_Hazard/Project2_Hazard.srcs/sources_1/new/test.v,1685207329,verilog,,,,test,,,,,,,,

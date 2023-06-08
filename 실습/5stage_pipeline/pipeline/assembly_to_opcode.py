@@ -1,4 +1,4 @@
-file_path = "실습/5stage_pipeline/pipeline/assembly_code.txt"
+file_path = "assembly_code.txt"
 with open(file_path) as f:
     codes = f.readlines()
 
@@ -94,11 +94,11 @@ for code in codes:
         opcodes.append("0"*32)
 
 
-with open('실습/5stage_pipeline/pipeline/instruction_hex.txt', 'w', encoding='UTF-8') as f:
+with open('instruction_hex.txt', 'w', encoding='UTF-8') as f:
     for op in opcodes:
         hex_value = hex(int(op, 2))  # Convert binary to hexadecimal
         f.write('0x' + hex_value[2:] + '\n')
 
-with open('실습/5stage_pipeline/pipeline/instruction_bin.txt','w',encoding='UTF-8') as f:
+with open('instruction_bin.txt','w',encoding='UTF-8') as f:
     for op in opcodes:
         f.write(op+'\n')
